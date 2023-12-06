@@ -1,0 +1,76 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f500;
+    margin: 0;
+    background-image: url(bg.jpg);
+}
+
+h1 {
+    text-align: center;
+    margin: 80px 0 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(11, 12, 10);
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos del formulario de búsqueda */
+form {
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    width: 450px;
+    padding: 20px;
+    background-color: rgba(255, 253, 253, 0.742);
+    box-shadow: 0 0 10px #111111;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #cae6ca;
+    color: rgb(12, 12, 12);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #95b3eb;
+}
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: #070707;
+    border: none;
+    padding: 9px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #95b3eb;
+}

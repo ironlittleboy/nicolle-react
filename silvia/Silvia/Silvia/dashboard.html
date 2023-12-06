@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo del proyecto">
+    </div>
+    <span class="Titulo_proyecto">Software para control de parqueaderos en la ULEAM</span>
+    <div class="user-box" onclick="redirigrAUsuario()">
+      <img src="img/perfil.png" alt="">
+      <span>NombreUsuario</span>
+     
+    </div>
+  </nav>
+  <div class="contenedor_todo">
+    <nav class="vertical-nav">
+      <ul>
+        <li><a href="dashboard.html">Inicio</a></li>
+        <li><a href="#" id="reservarEspacio_nav">Reservar espacio</a></li>
+        <li><a href="#" id="anularReserva_nav">Anular reserva</a></li>
+        <li><a href="#">Reportes</a></li>
+        <li><a href="#" id="TarifasyPagos">Tarifas y pagos</a></li>
+      </ul>
+    </nav>
+    
+    
+      <section class="espacios-disponibles">
+        <div class="titulo">
+          <h2>Espacios Generales</h2>
+
+        </div>
+        
+        <div class="icons ">
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 1</p>
+            <div class="linea-horizontal-bottom">
+
+            </div>
+          </div>
+
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 2</p>
+            <div class="linea-horizontal-bottom">
+
+            </div>
+          </div>
+
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 3</p>
+            <div class="linea-horizontal-bottom">
+
+            </div>
+          </div>
+
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 4</p>
+            <div class="linea-horizontal-bottom">
+            </div>
+          </div>
+          
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 5</p>
+            <div class="linea-horizontal-bottom">
+            </div>
+          </div>
+
+          
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 6</p>
+            <div class="linea-horizontal-bottom-succes libre" id="contenedorlibre6" >
+            </div>
+          </div>
+
+          
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 7</p>
+            <div class="linea-horizontal-bottom">
+            </div>
+          </div>
+
+          
+          <div class="icon-box contenedor_num">
+            <div class="icon-number">
+              <div class="icon-inner"></div>
+            </div>
+            <p>Espacio 8</p>
+            <div class="linea-horizontal-bottom-succes" >
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="leyenda">
+            <div class="cuadro-disponible">
+              <h3>Disponible</h3>
+            </div>
+            <div class="cuadro-proximo">
+              <h3>Próximo</h3>
+            </div>
+
+      </section>
+
+      <section class="reservas" id="reservados">
+        <h2>Espacios Reservados</h2>
+        <ul class="reservas_cumplidas">
+          <li>Reserva 1</li>
+          <li>Reserva 2</li>
+          <li>Reserva 3</li>
+          <li>Reserva 4</li>
+          <li>Reserva 5</li>
+          <li>Reserva 7</li>
+
+          <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+      </section>
+
+  </div>
+ 
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

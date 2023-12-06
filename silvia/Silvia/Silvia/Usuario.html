@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <title>Tu Página</title>
+</head>
+<body>
+    <nav class="principal_nav">
+        <div class="logo" >
+            <img src="img/logo.png" alt="Logo del proyecto" onclick="redirigirADashboard()">
+        </div>
+        <div class="user-box">
+            <span> NombreUsuario</span>
+        </div>
+    </nav>
+
+    <div class="contenedor_todo">
+        <div class="contenedor">
+            <div class="loco">
+                <div class="foto_user">
+                    <img src="img/perfil.png" alt="Foto de usuario">
+                </div>
+                <div class="contenido-usuario">
+                </div>
+                <span class="Nombre_user">Nombre Usuario</span>
+            </div>
+            <form class="datos-usuario" onsubmit="return validarFormulario()">
+                <h3>Datos de Usuario</h3>
+                <input type="text" placeholder="Usuario" class="input-text" id="inputUsuario">
+                <p id="mensajeUsuario" class="mensaje-error"></p>
+                <input type="email" placeholder="Correo" class="input-text" id="inputEmailPersonalizado">
+                <p id="resultadoCorreoElectronicoPersonalizado" class="mensaje-error"></p>
+                <input type="tel" placeholder="Teléfono" class="input-text" id="numeroTelefonoPersonalizado">
+                <p id="resultadoNumeroTelefonoPersonalizado" class="mensaje-error"></p>
+                <input type="text" placeholder="Cédula" class="input-text" id="numeroCedulaPersonalizada">
+                <p id="mensajeCedulaPersonalizada" class="mensaje-error"></p>
+                <button class="btn-submit">Guardar Cambios</button>
+            </form>
+            
+        </div>
+
+        <div class="contenedor_vehiculos">
+            <div class="principal_vehiculos">
+                <h2 class="vehiculos-title">Vehículos</h2>
+                <form class="datos-vehiculo">
+                    <div class="select-modelo" id="vehiculo1">
+                        <p>Vehiculo 1</p>
+                        <select class="select-input" id="selectModelo1" disabled>
+                            <option value="modelo1">Modelo 1</option>
+                            <option value="modelo2">Modelo 2</option>
+                        </select>
+                        <input type="text" placeholder="Placa" class="input-text" id="placa1" disabled>
+                        <button class="btn-submit" type="button" onclick="editarVehiculo(1)">Editar Información</button>
+                        <button class="btn-submit" type="button" onclick="eliminarVehiculo(1)">Eliminar</button>
+                        <button class="btn-submit" type="button" onclick="guardarInformacion(1)" id="guardarInfo1" disabled>Guardar Información</button>
+                    
+                    </div>
+                    <div class="select-modelo" id="vehiculo2">
+                        <p>Vehiculo 2</p>
+                        <select class="select-input" id="selectModelo2" disabled>
+                            <option value="modelo1">Modelo 1</option>
+                            <option value="modelo2">Modelo 2</option>
+                        </select>
+                        <input type="text" placeholder="Placa" class="input-text" id="placa2" disabled>
+                        <button class="btn-submit" type="button" onclick="editarVehiculo(2)">Editar Información</button>
+                        <button class="btn-submit" type="button" onclick="eliminarVehiculo(2)">Eliminar</button>
+                        <button class="btn-submit" type="button" onclick="guardarInformacion(2)" id="guardarInfo2" disabled>Guardar Información</button>
+                        
+                    </div>
+                    <div class="select-modelo" id="vehiculo3">
+                        <p>Vehiculo 3</p>
+                        <select class="select-input" id="selectModelo3" disabled>
+                            <option value="modelo1">Modelo 1</option>
+                            <option value="modelo2">Modelo 2</option>
+                        </select>
+                        <input type="text" placeholder="Placa" class="input-text" id="placa3" disabled>
+                        <button class="btn-submit" type="button" onclick="editarVehiculo(3)">Editar Información</button>
+                        <button class="btn-submit" type="button" onclick="eliminarVehiculo(3)">Eliminar</button>
+                        <button class="btn-submit" type="button" onclick="guardarInformacion(3)" id="guardarInfo3" disabled>Guardar Información</button>
+
+                    </div>
+                    <button class="btn-submit btn-add" type="button" onclick="agregarVehiculo()">Agregar Vehículo</button>
+                    
+                   
+                </form>
+
+                <div class="Contenedor_nav">
+                    <hr>
+                    <nav class="vertical-nav">
+                        <ul>
+                            <li><a href="javascript:void(0);" onclick="mostrarReserva()">Mis Reservas</a></li>
+                            <li><a href="reportes.html">Reportes</a></li>
+                            <li><a href="javascript:void(0);" onclick="mostrarResumenReservas()">Resumen de Reservas</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function mostrarReserva() {
+    Swal.fire({
+        icon: 'info',
+        title: 'Mis Reservas',
+        text: 'Tiene una reserva para las 12:00 PM en el estacionamiento 6.',
+    });
+}
+
+
+
+function mostrarResumenReservas() {
+    Swal.fire({
+        icon: 'info',
+        title: 'Resumen de Reservas',
+        text: 'Solo tiene una reserva en esta semana.',
+    });
+}
+
+
+
+
+function guardarInformacion(vehiculoId) {
+    // Guarda la información del vehículo aquí
+    // ...
+
+    // Desactiva la edición de campos del vehículo
+    document.getElementById(`selectModelo${vehiculoId}`).disabled = true;
+    document.getElementById(`placa${vehiculoId}`).disabled = true;
+
+    // Desactiva el botón "Guardar Información" para este vehículo
+    document.getElementById(`guardarInfo${vehiculoId}`).disabled = true;
+
+    // Activa nuevamente el botón "Editar Información" para este vehículo
+    document.querySelector(`button[onclick="habilitarEdicion(${vehiculoId})"]`).disabled = false;
+}
+
+
+function guardarVehiculo(vehiculoId) {
+    const selectElement = document.getElementById(`selectModelo${vehiculoId}`);
+    const placaElement = document.getElementById(`placa${vehiculoId}`);
+
+    if (!selectElement.disabled || !placaElement.disabled) {
+        const nuevoModelo = selectElement.value;
+        const nuevaPlaca = placaElement.value;
+
+        // Aquí deberías agregar la lógica para guardar la información en tu sistema o en el servidor.
+        // Puedes usar una solicitud AJAX para enviar los datos si es necesario.
+        // Por ejemplo, puedes usar la función fetch para enviar los datos a un servidor.
+
+        // Una vez que la información se haya guardado con éxito, puedes mostrar una notificación.
+        // Aquí utilizo un mensaje de éxito con SweetAlert como ejemplo.
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Información Guardada',
+            text: `La información del Vehículo ${vehiculoId} ha sido guardada con modelo ${nuevoModelo} y placa ${nuevaPlaca}.`,
+        });
+
+        // A continuación, desactivamos la edición de campos y el botón "Guardar Información".
+        selectElement.disabled = true;
+        placaElement.disabled = true;
+        document.getElementById(`guardarInfo${vehiculoId}`).disabled = true;
+    } else {
+        // Si los campos están desactivados, mostramos un mensaje informativo.
+        Swal.fire({
+            icon: 'info',
+            title: 'Editar Vehículo',
+            text: `No se realizaron cambios en la información del Vehículo ${vehiculoId}.`,
+        });
+    }
+}
+
+
+
+        function editarVehiculo(vehiculoId) {
+    const selectElement = document.getElementById(`selectModelo${vehiculoId}`);
+    const placaElement = document.getElementById(`placa${vehiculoId}`);
+    
+    selectElement.disabled = !selectElement.disabled;
+    placaElement.disabled = !placaElement.disabled;
+    
+    Swal.fire({
+        icon: 'info',
+        title: 'Editar Vehículo',
+        text: `La información del Vehículo ${vehiculoId} ha sido ${selectElement.disabled ? 'bloqueada' : 'desbloqueada'}.`,
+    });
+}
+
+function eliminarVehiculo(vehiculoId) {
+    Swal.fire({
+        icon: 'warning',
+        title: 'Eliminar Vehículo',
+        text: `¿Estás seguro de que deseas eliminar el Vehículo ${vehiculoId}?`,
+        showCancelButton: true,
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const vehiculoElement = document.getElementById(`vehiculo${vehiculoId}`);
+            vehiculoElement.remove();
+            Swal.fire('Eliminado', `El Vehículo ${vehiculoId} ha sido eliminado.`, 'success');
+        }
+    });
+}
+
+function agregarVehiculo() {
+    Swal.fire({
+        icon: 'info',
+        title: 'Agregar Vehículo',
+        html: `
+            <p>Selecciona un modelo de vehículo:</p>
+            <select id="nuevoModelo">
+                <option value="modelo1">Modelo 1</option>
+                <option value="modelo2">Modelo 2</option>
+            </select>
+            <p>Ingresa la placa:</p>
+            <input type="text" id="nuevaPlaca">
+        `,
+        showCancelButton: true,
+        confirmButtonText: 'Agregar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const nuevoModelo = document.getElementById('nuevoModelo').value;
+            const nuevaPlaca = document.getElementById('nuevaPlaca').value;
+            // Aquí puedes agregar lógica para crear un nuevo elemento de vehículo con el modelo y la placa ingresados.
+        }
+    });
+}
+
+    </script>
+    <script src="js/comun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

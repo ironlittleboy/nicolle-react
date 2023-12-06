@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Registro de Graduados</title>
+  <link rel="stylesheet" href="estiloregistro.css">
+</head>
+<body>
+  <main>
+    <form>
+      <h1>Registro de Graduados</h1>
+      
+      <label for="nombre">Nombres:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      
+      <label for="apellido">Apellidos:</label><br>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+
+      <label for="cedula">Cédula:</label><br>
+      <input type="number" id="cedula" name="cedula" required><br><br>
+
+      <label for="direccion">Dirección:</label><br>
+      <input type="text" id="direccion" name="direccion" required><br><br>
+      
+      <label for="telefono">Teléfono:</label><br>
+      <input type="tel" id="telefono" name="telefono" required><br><br>
+      
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="carrera">Carrera:</label><br>
+      <input type="text" id="carrera" name="carrera" required><br><br>
+
+      <label for="anio_graduacion">Año de Graduación:</label><br>
+      <input type="number" id="anio_graduacion" name="anio_graduacion" required><br><br>
+
+      <label for="Trabajando">Trabajando:</label><br>
+      
+      <label for="masculino">SI</label><br>
+      <input type="radio" id="SI" name="Trabajando" value="SI" required>
+      <label for="NO">NO</label><br><br>
+      <input type="radio" id="NO" name="Trabajando" value="NO" required>
+      
+      <input type="button" value="Registrarse"  onclick="validar()" >
+      <input type="button" value="Regresar a la página de inicio"  onclick="regreso()" >
+    </form>
+  </main>
+  <script src="registro.js"></script>
+</body>
+</html>

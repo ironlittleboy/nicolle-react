@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="estiloinisesion.css"/>
+    <title>Otra página de inicio de sesión</title>
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenidos a otra página de inicio de sesión</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesión aquí</p>
+                <p>↓</p>
+                <button class="sign-up-btn">Iniciar sesión</button>
+                <p>¿No tienes cuenta? Registrate  → </p>
+            </div>
+        </div>
+        <form class="formulario">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <input type="text" id="nombre" placeholder="Nombres">
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <input type="number" id="cedula" placeholder="Cédula">
+            <input type="text" id="profesion" placeholder="Profesión">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="contra" placeholder="Contraseña">
+            <input type="button" value="Registrarse" onclick="registro()">
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        <form class="formulario">
+            <p class="cuenta-gratis">Ingresa tu Usuario y Contraseña</p>
+            <input type="email" id="usuario" placeholder="Usuario">
+            <input type="password" id="clave" placeholder="Contraseña">
+            <input type="button" value="Iniciar Sesión" onclick="inicio()">
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aún no tienes una cuenta por favor regístrate aquí</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+    </div>
+    <script src="inisesion.js"></script>
+</body>
+</html>

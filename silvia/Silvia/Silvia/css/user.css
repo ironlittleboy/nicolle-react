@@ -1,0 +1,169 @@
+/* Estilos generales */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la línea vertical en el menú de navegación */
+.vertical-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para los contenedores */
+.contenedor_todo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.contenedor {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la foto de usuario */
+.foto_user img {
+    max-width: 100px; /* Ajustar el tamaño de la foto de usuario */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los formularios de datos de usuario y vehículo */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.input-text {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de informes */
+.informes {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los enlaces en la sección de informes */
+.informes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.informes ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: color 0.2s;
+}
+
+.informes ul li a:hover {
+    color: #007bff;
+}
+
+/* Navegación principal */
+.principal_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Logo */
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo a 100px o al valor que prefieras */
+    height: auto; /* Mantén la relación de aspecto original */
+  }
+
+
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.user-box {
+    margin-right: 20px;
+    border: 2px solid #000000;
+    padding: 8px; /* Reduje el padding para un aspecto más minimalista */
+    border-radius: 4px; /* Agregado para bordes redondeados */
+    display: flex; /* Para centrar contenido verticalmente */
+    align-items: center; /* Para centrar contenido verticalmente */
+  }
+  
+  .user-box img {
+    width: 33px;
+    height: 33px; /* Ajustado el alto para que la imagen sea cuadrada */
+    margin-right: 8px; /* Añadido margen a la derecha de la imagen */
+  }
+
+  .btn-add{
+    margin-top: 10px;
+  }

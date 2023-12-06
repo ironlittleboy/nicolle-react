@@ -1,0 +1,363 @@
+
+/* Estilos generales */
+body {
+  font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Navegación principal */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #535353; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 1px;
+}
+
+/* Logo */
+.logo img {
+  width: 112px; /* Ajusta el tamaño del logo a 100px o al valor que prefieras */
+  height: auto; /* Mantén la relación de aspecto original */
+}
+
+/* Navegación */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Mostrar los elementos de navegación en línea */
+}
+
+nav li {
+  margin-right: 20px; /* Agregar margen derecho entre elementos de navegación */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /* Cambiar el color del texto a blanco */
+  font-size: 16px;
+  transition: color 0.3s; /* Agregar una transición de color suave */
+}
+
+nav a:hover {
+  color: #ffc107; /* Cambiar el color del texto al pasar el cursor */
+}
+
+  
+  /* Cuadro de usuario */
+.user-box {
+  margin-right: 20px;
+  border: 2px solid #000000;
+  padding: 8px; /* Reduje el padding para un aspecto más minimalista */
+  border-radius: 4px; /* Agregado para bordes redondeados */
+  display: flex; /* Para centrar contenido verticalmente */
+  align-items: center; /* Para centrar contenido verticalmente */
+}
+
+.user-box img {
+  width: 33px;
+  border: 2px solid #000000;
+  height: 33px; /* Ajustado el alto para que la imagen sea cuadrada */
+  margin-right: 8px; /* Añadido margen a la derecha de la imagen */
+}
+
+
+/* Navegación vertical */
+.vertical-nav {
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  width: 200px; /* Ancho de la navegación vertical */
+  height: 82vh;
+  margin-top: 1%;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Alinea las opciones al espacio disponible */
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Hace que las opciones ocupen todo el espacio vertical disponible */
+}
+
+.vertical-nav li {
+  margin-bottom: 0; /* Elimina el espacio entre las opciones */
+  padding: 20px;
+
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.vertical-nav li:hover {
+  text-decoration: none;
+  background-color: #555;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+  
+  
+  
+  .contenedor_todo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre elementos */
+        
+  }
+  .icons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 50px;
+  }
+
+  .contenedor_num {
+    border: solid 1px #000;
+    border-radius: 10%;
+    padding: 20px;
+    justify-self: center;
+    align-self: center;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center;
+  }
+  
+  .linea-horizontal-bottom {
+    border-bottom: 1px solid black; /* Color y grosor del borde inferior */
+    width: 170%; /* Ancho de la línea horizontal */
+    position: relative;
+  }
+  
+  .linea-horizontal-bottom::after {
+    content: '';
+    display: block;
+    background-color: #ff0000; /* Color de fondo rojo */
+    border-bottom-left-radius: 26%;
+    border-bottom-right-radius: 26%;
+    height: 20px; /* Altura del área de fondo rojo */
+    width: 100%; /* Ancho del área de fondo rojo (igual que la línea horizontal) */
+    position: absolute;
+    bottom: -21px; /* Posiciona el área de fondo rojo debajo de la línea */
+    left: 0;
+  }
+  
+  .linea-horizontal-bottom-succes {
+    border-bottom: 1px solid black; /* Color y grosor del borde inferior */
+    width: 170%; /* Ancho de la línea horizontal */
+    position: relative;
+  }
+  
+  .linea-horizontal-bottom-succes::after {
+    content: '';
+    display: block;
+    background-color: #0dcaf0;; /* Color de fondo rojo */
+    border-bottom-left-radius: 26%;
+    border-bottom-right-radius: 26%;
+    height: 20px; /* Altura del área de fondo rojo */
+    width: 100%; /* Ancho del área de fondo rojo (igual que la línea horizontal) */
+    position: absolute;
+    bottom: -21px; /* Posiciona el área de fondo rojo debajo de la línea */
+    left: 0;
+  }
+  
+  /* Leyenda */
+.leyenda {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .espacios-disponibles{
+    margin-right: 50px;
+  }
+  .titulo {
+    text-align: center; /* Centra horizontalmente el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+  }
+  
+  .cuadro-disponible,
+  .cuadro-proximo {
+    width: 38%;
+    text-align: center;
+  }
+  
+  .cuadro-disponible {
+    background-color: #0dcaf0;; /* Color de disponibilidad */
+  }
+  
+  .cuadro-proximo {
+    background-color: #ff0000; /* Color de próxima reserva */
+  }
+  
+
+/* Estilos para la sección de reservas */
+.reservas {
+    background-color: #f5f5f5; /* Color de fondo */
+    padding: 20px;
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    align-items: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  .reservas h2 {
+    font-size: 24px; /* Tamaño del título */
+    margin-bottom: 5px; /* Espacio entre el título y la lista de reservas */
+  }
+  .Titulo_proyecto{
+    font-size: 20px;
+  }
+
+  .reservas ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .reservas li {
+    font-size: 16px; /* Tamaño del texto de la reserva */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    padding: 5px; /* Espacio interno de los elementos de la lista */
+    border: 1px solid #ccc; /* Borde ligero alrededor de cada reserva */
+    border-radius: 5px;
+    background-color: #fff; /* Color de fondo de las reservas */
+  }
+  
+  /* Estilos para resaltar las reservas al pasar el mouse */
+  .reservas li:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera al pasar el mouse */
+  }
+    /* Estilos para los reportes*/
+  .reportes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .reportes-container_row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre elementos */
+  }
+
+  
+  .reporte-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+  /* Estilos generales para dispositivos móviles */
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navegación principal */
+nav {
+  background-color: #535353;
+  color: #fff;
+  padding: 10px; /* Incrementado el espacio para una mejor experiencia táctil */
+}
+
+/* Logo para dispositivos móviles */
+.logo img {
+  width: 80px; /* Ajustado el tamaño del logo para dispositivos móviles */
+  height: auto;
+}
+
+/* Navegación para dispositivos móviles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: none; /* Ocultar la navegación por defecto */
+}
+
+nav li {
+  margin-right: 0; /* Eliminar el margen derecho entre elementos de navegación */
+}
+
+/* Mostrar la navegación en un menú desplegable en dispositivos móviles */
+.menu-icon {
+  display: block; /* Mostrar el ícono del menú */
+  font-size: 24px; /* Tamaño del ícono del menú */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+/* Cuadro de usuario para dispositivos móviles */
+.user-box {
+  display: none; /* Ocultar el cuadro de usuario en dispositivos móviles */
+}
+
+.user-box img {
+  width: 33px;
+  height: 33px;
+  margin-right: 8px;
+}
+
+/* Navegación vertical para dispositivos móviles */
+.vertical-nav {
+  background-color: #333;
+  width: 100%; /* Ancho de la navegación vertical en dispositivos móviles */
+  border-top-right-radius: 0; /* Eliminar bordes redondeados en la parte superior derecha */
+  border-bottom-right-radius: 0; /* Eliminar bordes redondeados en la parte inferior derecha */
+}
+
+/* Estilos para la sección de reservas en dispositivos móviles */
+.reservas {
+  background-color: #f5f5f5;
+  padding: 10px; /* Reducido el espacio en dispositivos móviles */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+}
+
+.reservas h2 {
+  font-size: 20px; /* Tamaño del título en dispositivos móviles */
+  margin-bottom: 5px;
+}
+
+.reservas li {
+  font-size: 14px; /* Tamaño del texto de la reserva en dispositivos móviles */
+  margin-bottom: 8px; /* Espacio entre elementos de la lista en dispositivos móviles */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Estilos para resaltar las reservas al pasar el dedo en dispositivos móviles */
+.reservas li:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  }
+  
