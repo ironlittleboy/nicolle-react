@@ -1,29 +1,44 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import "./pincipal.css"
 import LogoUleam from "../../../public/escudo.jpg"
 import horario from "../../../public/HORARIOS.jpg"
 import Oip from "../../../public/OIP.jpg"
 import Seguimiento from "../../../public/SEGUIMIENTO.jpg"
 const Principal = () => {
+  const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+
+  const handleLogout = () => {
+    localStorage.setItem('loggedIn', false);
+    navigate('/');
+  };
   return (
     <div className='main'>
       <header>
-        <div>
-          <img src={LogoUleam} alt="logo uleam" id='logo'/>
-        </div>
-        <ul>
+      <div>
+        <img src={LogoUleam} alt="logo uleam" id='logo' />
+      </div>
+      <ul>
+        <li>
+          <NavLink to={"/"}>Página principal</NavLink>
+        </li>
+        {!isLoggedIn ? (
+          <>
+            <li>
+              <NavLink to={"/register"}>Registrarse</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/login"}>Iniciar Sesión</NavLink>
+            </li>
+          </>
+        ) : (
           <li>
-            <NavLink to={"/"}>Pagina principal</NavLink>
+            <button onClick={handleLogout}>Cerrar Sesión</button>
           </li>
-          <li>
-           <NavLink to={"/register"}>Registrarse</NavLink>
-          </li>
-          <li>
-           <NavLink to={"/login"}>Iniciar Sesion</NavLink>
-          </li>
-        </ul>
-      </header>
+        )}
+      </ul>
+    </header>
       <section>
         <div className='context-card'>
           <div className='card'>

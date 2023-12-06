@@ -10,8 +10,23 @@ const Login = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(dataForm);
-    navigate("/")
+    const registeredUsers = JSON.parse(localStorage.getItem('userData')) || [];
+    if (Array.isArray(registeredUsers)) {
+      // Buscar un usuario que coincida con el email y la contraseña
+      const user = registeredUsers.find(user => user.email === dataForm.email && user.password === dataForm.password);
+
+      if (user) {
+        // Si el usuario existe y la contraseña coincide
+        localStorage.setItem('loggedIn', true);
+        alert('Inicio de sesión exitoso');
+        navigate('/'); // Redireccionar a la página principal
+      } else {
+        // Si no se encuentra el usuario o la contraseña no coincide
+        alert('Correo electrónico o contraseña incorrectos');
+      }
+    } else {
+      alert("Error en la base de datos de usuarios.");
+    }
   };
 
   const handleChange = (e) => {
@@ -26,11 +41,11 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="">Correo Electronico</label>
-            <input type="email" required id='email' name='email' />
+            <input type="email" required id='email' name='email' onChange={handleChange}/>
           </div>
           <div>
             <label htmlFor="">Contraseña</label>
-            <input type="password" id='password' name='password' required />
+            <input type="password" id='password' name='password' required onChange={handleChange}/>
           </div>
           <button type='submit'>Iniciar Sesion</button>
         </form>
